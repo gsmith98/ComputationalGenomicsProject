@@ -12,7 +12,7 @@ if __name__=='__main__':
 		sequence = sequence + line
 	#print sequence;	
 	#print len(sequence);
-	for i in range(0,20000):	
+	for i in range(0,1000):	
 		num = random.randint(1, 5498349);
 		sub = ">seq"+str(i+1)+"\n"+ sequence[num:num+101]
 		output.write(sub)
