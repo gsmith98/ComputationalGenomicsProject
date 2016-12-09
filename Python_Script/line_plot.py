@@ -2,7 +2,8 @@
 
 import glob
 import numpy
-#matplotlib.use('Agg')
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 #Create images
@@ -51,7 +52,7 @@ ax.plot(output)
 plt.xticks(x, labels)
 
 # Save the figure
-fig.savefig('../fig/plot1.png')
+fig.savefig('../figs/plot1.png')
 plt.clf()
 
 #plot 2
@@ -70,7 +71,7 @@ ax.plot(output2)
 plt.xticks(x, labels)
 
 # Save the figure
-fig.savefig('../fig/plot2.png')
+fig.savefig('../figs/plot2.png')
 plt.clf()
 
 #plot 3
@@ -89,5 +90,5 @@ ax.plot(output3)
 plt.xticks(x, labels)
 
 # Save the figure
-fig.savefig('../fig/plot3.png')
+fig.savefig('../figs/plot3.png')
 plt.clf()
