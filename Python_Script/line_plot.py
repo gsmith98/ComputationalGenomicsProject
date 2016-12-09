@@ -68,12 +68,12 @@ for item in alphabets:
     output6.append(float(avg_repeat[item]))
 #plot 1
 fig = plt.figure()
-fig.suptitle('Average length of Alphabet', fontsize=14, fontweight='bold')
+fig.suptitle('Average length of the Aligned Sequences', fontsize=14, fontweight='bold')
 ax = fig.add_subplot(111)
 fig.subplots_adjust(top=0.9)
 
-ax.set_xlabel('Alphabet')
-ax.set_ylabel('Aligned Sequence Lengths')
+ax.set_xlabel('Reduced Alphabet')
+ax.set_ylabel('Average Aligned Sequence Lengths')
 
 labels = ['Alpha 1', 'Alpha 2', 'Alpha 3', 'Alpha 4', 'Alpha 5', 'Alpha 6', 'Alpha 7', 'Alpha 8', 'Alpha 9']
 x = [0,1,2,3,4,5,6,7,8]
@@ -91,7 +91,7 @@ fig.suptitle('Number of Matches', fontsize=14, fontweight='bold')
 ax = fig.add_subplot(111)
 fig.subplots_adjust(top=0.9)
 
-ax.set_xlabel('Alphabet')
+ax.set_xlabel('Reduced Alphabet')
 ax.set_ylabel('Count')
 
 labels = ['Alpha 1', 'Alpha 2', 'Alpha 3', 'Alpha 4', 'Alpha 5', 'Alpha 6', 'Alpha 7', 'Alpha 8', 'Alpha 9']
@@ -110,7 +110,7 @@ fig.suptitle('Number of Sequences Matched', fontsize=14, fontweight='bold')
 ax = fig.add_subplot(111)
 fig.subplots_adjust(top=0.9)
 
-ax.set_xlabel('Alphabet')
+ax.set_xlabel('Reduced Alphabet')
 ax.set_ylabel('Count')
 
 labels = ['Alpha 1', 'Alpha 2', 'Alpha 3', 'Alpha 4', 'Alpha 5', 'Alpha 6', 'Alpha 7', 'Alpha 8', 'Alpha 9']
@@ -129,7 +129,7 @@ fig.suptitle('Number of Gaps', fontsize=14, fontweight='bold')
 ax = fig.add_subplot(111)
 fig.subplots_adjust(top=0.9)
 
-ax.set_xlabel('Alphabet')
+ax.set_xlabel('Reduced Alphabet')
 ax.set_ylabel('Count')
 
 labels = ['Alpha 1', 'Alpha 2', 'Alpha 3', 'Alpha 4', 'Alpha 5', 'Alpha 6', 'Alpha 7', 'Alpha 8', 'Alpha 9']
@@ -148,7 +148,7 @@ fig.suptitle('Percentage of Positive Scoring Matches', fontsize=14, fontweight='
 ax = fig.add_subplot(111)
 fig.subplots_adjust(top=0.9)
 
-ax.set_xlabel('Alphabet')
+ax.set_xlabel('Reduced Alphabet')
 ax.set_ylabel('Count')
 
 labels = ['Alpha 1', 'Alpha 2', 'Alpha 3', 'Alpha 4', 'Alpha 5', 'Alpha 6', 'Alpha 7', 'Alpha 8', 'Alpha 9']
@@ -167,7 +167,7 @@ fig.suptitle('Average hits per sequence', fontsize=14, fontweight='bold')
 ax = fig.add_subplot(111)
 fig.subplots_adjust(top=0.9)
 
-ax.set_xlabel('Alphabet')
+ax.set_xlabel('Reduced Alphabet')
 ax.set_ylabel('Count')
 
 labels = ['Alpha 1', 'Alpha 2', 'Alpha 3', 'Alpha 4', 'Alpha 5', 'Alpha 6', 'Alpha 7', 'Alpha 8', 'Alpha 9']
