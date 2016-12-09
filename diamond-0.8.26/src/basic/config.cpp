@@ -127,6 +127,8 @@ Config::Config(int argc, const char **argv)
 		("K", 0, "K parameter for custom matrix", K)
 		("seg", 0, "enable SEG masking of queries (yes/no)", seg)
 		("query-gencode", 0, "genetic code to use to translate query (see user manual)", query_gencode, 1u)
+        // Added reduced alphabet option
+        ("reduced-alphabet", 0, "reduced alphabet", reduced_alphabet)
 		("salltitles", 0, "print full subject titles in output files", salltitles);
 
 	Options_group advanced("Advanced options");
@@ -266,6 +268,14 @@ Config::Config(int argc, const char **argv)
 	}	
 
 	if (command == Config::blastp || command == Config::blastx || command == Config::benchmark) {
+
+        if (reduced_alphabet != "") {
+            // Set the reduced alphabet
+            // Convert underscores to spaces
+            std::replace(Config::reduced_alphabet.begin(), Config::reduced_alphabet.end(), '_', ' ');
+            Reduction::reduction.set_alphabet(Config::reduced_alphabet.c_str());
+        }
+
 		if (tmpdir == "")
 			tmpdir = extract_dir(output_file);
 		if (gap_open == -1)

@@ -84,7 +84,23 @@ struct Reduction
 			dst[i] = reduction(seq[i]);
 	}
 
-	static const Reduction reduction;
+	static Reduction reduction;
+
+	void set_alphabet(const char *definition_string)
+	{
+		memset(map_, 0, sizeof(map_));
+		memset(map8_, 0, sizeof(map8_));
+		map_[(long)value_traits.mask_char] = value_traits.mask_char;
+		const vector<string> tokens(tokenize(definition_string, " "));
+		size_ = (unsigned)tokens.size();
+		for (unsigned i = 0; i<size_; ++i)
+			for (unsigned j = 0; j<tokens[i].length(); ++j) {
+				const char ch = tokens[i][j];
+				map_[(long)value_traits.from_char(ch)] = i;
+				map8_[(long)value_traits.from_char(ch)] = i;
+			}
+		map8_[(long)value_traits.mask_char] = (char)size_;
+	}
 
 private:
 

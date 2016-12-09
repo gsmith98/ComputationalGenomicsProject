@@ -72,7 +72,7 @@ unsigned Align_mode::from_command(unsigned command)
 
 Align_mode align_mode (Align_mode::blastp);
 
-const Reduction Reduction::reduction("KREDQN C G H M F Y ILV W P STA");
+Reduction Reduction::reduction("KREDQN C G H M F Y ILV W P STA");
 
 Statistics statistics;
 
