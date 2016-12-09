@@ -174,7 +174,7 @@ labels = ['Alpha 1', 'Alpha 2', 'Alpha 3', 'Alpha 4', 'Alpha 5', 'Alpha 6', 'Alp
 x = [0,1,2,3,4,5,6,7,8]
 ax.plot(output6)
 
-plt.xticks(x, lab
+plt.xticks(x, labels)
 # Save the figure
 fig.savefig('../figs/fig6.png')
 plt.clf()
