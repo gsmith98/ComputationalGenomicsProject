@@ -278,7 +278,7 @@ def parse_filter_write_output():
 	
 def parse_end():
 	with open(directory+'/final_database.fasta', 'a') as output:
-		with open(directory+'/all_query.fasta') as input: 
+		with open(directory+'/all_discarded.fasta') as input: 
 			for line in input.readlines():
 				if '>' in line:
 					output.write(line.split(';')[0]+'\n')
