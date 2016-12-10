@@ -1,0 +1,34 @@
+Computational Genomics
+
+This directory contains all the code we used for the assignment, from our
+group's Github. There were also extra data files and results not included in
+the Github because of their extra space.
+
+diamond-0.8.26 contains all the source code for diamond, along with its
+documentation. We implemented the ability to set different reduced alphabets,
+which can be set with the --reduced-alphabet flag, followed by a reduced
+alphabet with groups separated by underscores.
+Diamond requires a database, nr.dmnd, that is built using its makedb command
+(examples in diamond's documentation). With this built, the alignment commands
+can then be run. We have one built on our AWS instance, but it is a bit too
+large to upload.
+
+Database_Downloader.py needs to be run with Python 2.7. We used the search
+query "ecoli" and database "protein" (prompted at runtime). We used 37 threads
+to download the 37 URLs. Output is put in the directory "database_files",
+created by the program. final_database.fasta is the compiled and filtered
+sequence.
+
+gatherData.py runs successive tests of diamond, with varying settings, the
+settings can be tweaked in the program.
+
+parseDiamondOutput.py is just used by gatherData.py to parse the results.
+
+ecoli.py can be used to get reads from sequence.fasta, and place them into
+reads.fna. We generated our reads and have them stored in reads.fna (and
+ecoli_reads.fna).
+
+make_hist.py and line_plot.py outputs to the directory figs/, creating data
+from the .m8 results files.
+
+Our write-up also discusses some of programs and how we ran them.
